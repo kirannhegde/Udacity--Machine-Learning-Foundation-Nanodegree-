@@ -1,0 +1,119 @@
+def duration_in_mins(datum, city):
+def time_of_trip(datum, city):
+def type_of_user(datum, city):
+
+
+City: NYC
+OrderedDict([('tripduration', '839'),
+             ('starttime', '1/1/2016 00:09:55'),
+             ('stoptime', '1/1/2016 00:23:54'),
+             ('start station id', '532'),
+             ('start station name', 'S 5 Pl & S 4 St'),
+             ('start station latitude', '40.710451'),
+             ('start station longitude', '-73.960876'),
+             ('end station id', '401'),
+             ('end station name', 'Allen St & Rivington St'),
+             ('end station latitude', '40.72019576'),
+             ('end station longitude', '-73.98997825'),
+             ('bikeid', '17109'),
+             ('usertype', 'Customer'),
+             ('birth year', ''),
+             ('gender', '0')])
+
+City: Chicago
+OrderedDict([('trip_id', '9080545'),
+             ('starttime', '3/31/2016 23:30'),
+             ('stoptime', '3/31/2016 23:46'),
+             ('bikeid', '2295'),
+             ('tripduration', '926'),
+             ('from_station_id', '156'),
+             ('from_station_name', 'Clark St & Wellington Ave'),
+             ('to_station_id', '166'),
+             ('to_station_name', 'Ashland Ave & Wrightwood Ave'),
+             ('usertype', 'Subscriber'),
+             ('gender', 'Male'),
+             ('birthyear', '1990')])
+
+City: Washington
+OrderedDict([('Duration (ms)', '427387'),
+             ('Start date', '3/31/2016 22:57'),
+             ('End date', '3/31/2016 23:04'),
+             ('Start station number', '31602'),
+             ('Start station', 'Park Rd & Holmead Pl NW'),
+             ('End station number', '31207'),
+             ('End station', 'Georgia Ave and Fairmont St NW'),
+             ('Bike number', 'W20842'),
+             ('Member Type', 'Registered')])
+
+
+tests = {'NYC': 13.9833,
+         'Chicago': 15.4333,
+         'Washington': 7.1231}
+
+tests = {'NYC': (1, 0, 'Friday'),
+         'Chicago': (3, 23, 'Thursday'),
+         'Washington': (3, 22, 'Thursday')}
+
+tests = {'NYC': 'Customer',
+         'Chicago': 'Subscriber',
+         'Washington': 'Subscriber'}
+
+
+
+City: Washington
+OrderedDict([('duration', '7.123116666666666'),
+             ('month', '3'),
+             ('hour', '22'),
+             ('day_of_week', 'Thursday'),
+             ('user_type', 'Subscriber')])
+
+City: Chicago
+OrderedDict([('duration', '15.433333333333334'),
+             ('month', '3'),
+             ('hour', '23'),
+             ('day_of_week', 'Thursday'),
+             ('user_type', 'Subscriber')])
+
+City: NYC
+OrderedDict([('duration', '13.983333333333333'),
+             ('month', '1'),
+             ('hour', '0'),
+             ('day_of_week', 'Friday'),
+             ('user_type', 'Customer')])
+
+
+city_info = {'Washington': {'in_file': './data/Washington-CapitalBikeshare-2016.csv',
+                            'out_file': './data/Washington-2016-Summary.csv'},
+             'Chicago': {'in_file': './data/Chicago-Divvy-2016.csv',
+                         'out_file': './data/Chicago-2016-Summary.csv'},
+             'NYC': {'in_file': './data/NYC-CitiBike-2016.csv',
+                     'out_file': './data/NYC-2016-Summary.csv'}}
+
+
+------------------------------------------
+n_subscribers, n_customers, n_total
+
+Washington:(51753, 14573, 66326)
+Chicago: (54982, 17149, 72131)
+NYC: (245896, 30902, 276798)
+
+Subscriber data:
+0.78
+0.76
+0.88
+
+Customer data:
+0.21
+0.23
+0.11
+
+------------------------------------------
+4-b
+./data/NYC-2016-Summary.csv
+(15.81259299802294, 7.3024371563378345)
+
+./data/Chicago-2016-Summary.csv
+(16.563629368787335, 8.332062497400562)
+
+./data/Washington-2016-Summary.csv
+(18.93287355913721, 10.83888671109369)
